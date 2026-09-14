@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CyberQuiz // Security Briefing</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="folder">
+
+    <!-- Header: looks like a stamped case-file cover -->
+    <header class="folder-header">
+      <span class="stamp">CLASSIFIED</span>
+      <h1>CYBERQUIZ</h1>
+      <p class="subtitle">Security Awareness Briefing — Case File #04</p>
+    </header>
+
+    <!-- START SCREEN -->
+    <section id="start-screen" class="screen">
+      <p class="brief-text">
+        You are about to review <span id="total-questions-label">--</span> field reports.
+        Read each scenario and select the correct response. Your accuracy score
+        will be logged at the end of the briefing.
+      </p>
+      <button id="start-btn" class="action-btn">Begin Briefing</button>
+    </section>
+
+    <!-- QUIZ SCREEN -->
+    <section id="quiz-screen" class="screen hidden">
+      <div class="progress-row">
+        <span id="question-counter">Report 1 / 5</span>
+        <span id="score-tracker">Score: 0</span>
+      </div>
+
+      <div class="redacted-bar"></div>
+
+      <h2 id="question-text">Question text goes here</h2>
+
+      <div id="options-container" class="options-container">
+        <!-- Option buttons are inserted here by script.js -->
+      </div>
+
+      <p id="feedback-text" class="feedback-text"></p>
+
+      <button id="next-btn" class="action-btn hidden">Next Report</button>
+    </section>
+
+    <!-- END SCREEN -->
+    <section id="end-screen" class="screen hidden">
+      <h2>Briefing Complete</h2>
+      <p class="brief-text" id="final-score-text">You scored 0 out of 5.</p>
+      <p class="verdict" id="verdict-text"></p>
+      <button id="restart-btn" class="action-btn">Run Briefing Again</button>
+    </section>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
